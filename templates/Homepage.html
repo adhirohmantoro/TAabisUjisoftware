@@ -13,7 +13,19 @@
 </head>
 <body>
     <div class="session" style="width: 51rem; height: 30rem; display: flex; flex-direction: column; justify-content: end; background-position: 27% 90%; background-repeat: no-repeat;">
-        <div style="    color: white;
+        <form method="post" action="{{ url_for('logout')}}" style="
+padding: 0; 
+ background: transparent;
+ display: inline; 
+ flex-direction: column;
+ align-items: flex-start;
+ padding-bottom: 0;
+ width: 0;
+        ">
+          <button type="submit">logout</button>
+        </form>
+        <div style="   
+        color: white;
         font-weight: bold;
         font-size: 2.6rem;
         text-align: center;
@@ -21,10 +33,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;">
-            Hi username
+            Hi, {{username}} !
         </div>
         <div style="height: 10rem; background-color: white; padding: 2rem; flex-shrink: 0;">
-            <p style="font-weight: bold; font-size: 1.5rem; text-align: center; margin-bottom: 2rem;">Apa yang ingin anda lakukan</p>
+            <p style="font-weight: bold; font-size: 1.5rem; text-align: center; margin-bottom: 2rem;">Apa yang ingin anda lakukan?</p>
             <div style="display: flex; justify-content: center;">
                 <a href="{{ url_for('screening') }}" style="margin: 0">
                     <button style="margin: 0">Screening</button>
