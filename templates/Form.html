@@ -41,7 +41,7 @@
  
   <body>
   <!-- Define Element Form -->
-  <form id="all-data" method="post" action="screening"></form>
+  <form id="all-data" method="post" action="screening" enctype="multipart/form-data"></form>
 
   <div class="content">
         <div class="container">
@@ -60,28 +60,32 @@
                   <div class="border-right pr-5 mb-5">
                     <div class="row">
                       <div class="col-md-6 form-group">
-                        <input type="text" class="form-control" name="fname" id="fname" form="all-data" placeholder="Nama Lengkap">
+                        <input type="text" class="form-control" name="name" id="name" form="all-data" placeholder="Nama Lengkap">
                       </div>
                       <div class="col-md-6 form-group">
-                        <input type="text" class="form-control" name="lname" id="lname" form="all-data" placeholder="NIK">
+                        <input type="text" class="form-control" name="nik" id="nik" form="all-data" placeholder="NIK">
                       </div>
                     </div>
     
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" name="telahir" id="telahir" form="all-data" placeholder="Tempat Lahir">
+                        <input type="text" class="form-control" name="tmpt_lahir" id="telahir" form="all-data" placeholder="Tempat Lahir">
                       </div>
                     </div>
     
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="date" class="form-control" name="tlahir" id="tlahir" form="all-data" placeholder="Tanggal Lahir">
+                        <input type="date" class="form-control" name="tgl_lahir" id="tlahir" form="all-data" placeholder="Tanggal Lahir">
                       </div>
                     </div>
     
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" name="jkelamin" id="jkelamin" form="all-data" placeholder="Jenis Kelamin">
+                        <label for="jkelamin">Example select</label>
+                        <select class="form-control" id="jkelamin" form="all-data" placeholder="Jenis Kelamin" name="jkelamin">
+                          <option value="l">Laki-Laki</option>
+                          <option value="p">Perempuan</option>
+                        </select>
                       </div>
                     </div>
     
@@ -126,25 +130,25 @@
                       <div class="col-md-12">
                         <div style="font-size: 1.1rem; margin-bottom: 1rem; color: rgba(0, 0, 0, 0.5); font-weight: bold;">Gejala:</div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="gejala" form="all-data"  value="demam" id="demam">
+                          <input class="form-check-input" type="checkbox" name="gejala[]" form="all-data"  value="demam" id="demam">
                           <label class="form-check-label" for="demam">
                             Demam (> 37,5 °C)
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="gejala" form="all-data"  value="batuk-pilek" id="batuk-pilek">
+                          <input class="form-check-input" type="checkbox" name="gejala[]" form="all-data"  value="batuk-pilek" id="batuk-pilek">
                           <label class="form-check-label" for="batuk-pilek">
                             Batuk - pilek
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="gejala" form="all-data"  value="tenggorokan-sakit" id="tenggorokan-sakit">
+                          <input class="form-check-input" type="checkbox" name="gejala[]" form="all-data"  value="tenggorokan-sakit" id="tenggorokan-sakit">
                           <label class="form-check-label" for="tenggorokan-sakit">
                             Tenggorokan sakit
                           </label>
                         </div>   
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="gejala" form="all-data"  value="hidung-tersumbat" id="hidung-tersumbat">
+                          <input class="form-check-input" type="checkbox" name="gejala[]" form="all-data"  value="hidung-tersumbat" id="hidung-tersumbat">
                           <label class="form-check-label" for="hidung-tersumbat">
                             Hidung tersumbat
                           </label>
