@@ -126,8 +126,25 @@ def screening():
 
         # Classification
 
-
     return render_template("Form.html")
+
+@app.route("/screening/<patient_id>", methods=['GET'])
+def view_screening(patient_id):
+    cursor = mysql.connection.cursor()
+
+    cursor.execute(''' SELECT * FROM patients WHERE id=%s AND id=%s ''', (patient_id, patient_id))
+    patient = cursor.fetchone()
+    print(patient)
+    nama = patient[1].split(' ')
+    jenis_kelamin = patient[3]
+    if jenis_kelamin == 'l':
+        jenis_kelamin = 'Laki-laki'
+    else:
+        jenis_kelamin = 'Perempuan'
+    tmpt_tgl_lahir = patient[4]+', '+patient[5]
+    alamat = patient[6]
+    no_telp = patient[7]
+    return render_template("HasilSkrining.html", nama=nama, jenis_kelamin=jenis_kelamin, tmpt_tgl_lahir=tmpt_tgl_lahir, alamat=alamat, no_telp=no_telp)
 
 
 
