@@ -37,30 +37,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {%for index, patient in patients%}
                             <tr>
-                                <td>Adhi rohmantoro</td>
-                                <td>50020485</td>
-                                <td>07/10/2021</td>
+                                <td>{{patient[1]}}</td>
+                                <td>{{patient[2]}}</td>
+                                <td>{{patient[12].date()}}</td>
                                 <td>
-                                    <a href="#">Lihat hasil</a>
+                                    <a href="{{ url_for('screening') }}/{{patient[0]}}">Lihat hasil</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Anriza</td>
-                                <td>082233061321</td>
-                                <td>6/9/2020</td>
-                                <td>
-                                    <a href="#">Lihat hasil</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Adhi rohmantoro</td>
-                                <td>50020485</td>
-                                <td>07/10/2021</td>
-                                <td>
-                                    <a href="#">Lihat hasil</a>
-                                </td>
-                            </tr>
+                            {%endfor%}
                         </tbody>
                     </table>
                 </div>

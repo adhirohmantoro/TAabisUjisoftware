@@ -7,7 +7,7 @@
       <!--link rel="stylesheet" href="{{ url_for('static',    filename='css/bootstrap.min.css') }}"-->
       <!-- CSS -->  
       <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <title>Screening IoMT COVID-19</title>
 
 </head>
@@ -33,12 +33,15 @@
               </div>
             <div class="row" style="display: flex;
             justify-content: center;">
-                <a href="{{ url_for('cari') }}">
-                    <button type="button" style="margin: 0 0 0 0.5rem; width: 9rem;">Cari</button>
-                </a>
+                <button type="button" style="margin: 0 0 0 0.5rem; width: 9rem;" id="cari">Cari</button>
             </div>
         </div>
     </div>
+    <script>
+        $('#cari').click(e => {
+            window.location.href = '/cari/'+$('#nik').val()
+        })
+    </script>
 </body>
 <!-- partial -->
  

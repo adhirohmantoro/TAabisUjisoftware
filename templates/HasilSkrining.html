@@ -45,33 +45,33 @@
         <div class="col-lg-2 bg">
 
         </div>
-        <div class="col-lg-9" style="padding-left: 3rem;">
+        <div class="col-lg-9" style="padding-left: 3rem; background-color:#ffffff">
             <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{nama[0]}}">
+                  <input type="text" class="form-control" value="{{nama[0]}}" readonly>
                 </div> 
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{nama[1]}}">
+                  <input type="text" class="form-control" value="{{nik}}" readonly>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{tmpt_tgl_lahir}}">
+                  <input type="text" class="form-control" value="{{tmpt_tgl_lahir}} " readonly>
                 </div> 
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{jenis_kelamin}}">
+                  <input type="text" class="form-control" value="{{jenis_kelamin}}" readonly>
                 </div> 
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{alamat}}">
+                  <input type="text" class="form-control" value="{{alamat}}" readonly>
                 </div> 
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" value="{{no_telp}}">
+                  <input type="text" class="form-control" value="{{no_telp}}" readonly>
                 </div> 
             </div>
             <div class="row">
@@ -85,15 +85,15 @@
                     <tbody>
                       <tr>
                         <td>Detak jantung</td>
-                        <td></td>
+                        <td>{{avg_heartrate}}</td>
                       </tr>
                       <tr>
                         <td>Saturasi oksigen</td>
-                        <td></td>
+                        <td>{{avg_spo2}}</td>
                       </tr>
                       <tr>
                         <td>Laju Pernapasan</td>
-                        <td></td>
+                        <td>{{avg_respiration}}</td>
                       </tr>
                       <tr>
                         <td>X-ray</td>
